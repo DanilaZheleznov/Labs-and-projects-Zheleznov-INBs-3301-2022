@@ -1,0 +1,59 @@
+#include <math.h>
+
+extern "C" float fun_el(int k, float x)
+{
+	float f;
+	f = pow(x, -(1.0 / k)) / sin(x);
+	return f;
+}
+--------------------------------------------------------------------
+#include <iostream>
+
+using namespace std;
+extern "C" float SumR(int k, float x);
+int main(int argc, char** argv)
+{   setlocale(LC_ALL, "Russian");
+	int n;
+	float x;
+	cout << "Введите x " << endl;
+	cin >> x; 
+	cout << "Введите количество элементов ряда " << endl;
+	cin >> n;
+	double R = 0.0;
+	R = SumR(n, x);
+	cout <<"Сумма "<< n <<" элементов ряда = " << R << endl;
+	return 0;
+}
+-------------------------------------------------------------------
+.586 
+.MODEL flat,C
+.DATA
+SUM DD 0.0
+i_local DD 0
+.CODE
+extern fun_el:near ; объявление внешней функции fun_el
+public SumR
+SumR proc C
+push ebp
+mov ebp,esp
+mov i_local,1
+mov ecx, dword ptr [ebp+8]
+@@for_i: ; начало цикла
+push ecx
+push dword ptr [ebp + 12]
+push i_local
+call fun_el
+fld SUM
+add esp,8
+fadd
+pop ecx
+inc i_local
+FABS;берем модуль числа
+fstp SUM
+loop @@for_i ; конец цикла
+fld SUM
+mov esp,ebp
+pop ebp
+ret
+SumR endp
+End

@@ -1,0 +1,75 @@
+__Lrdata 2E FFFFFFD5 DATA
+__Hrbss 2E 0 DATA
+__Lrbss 20 0 DATA
+strx_xcopy 9B 0 CODE
+__Birdata 3 FFFFFFD5 DATA
+__Hirdata 2E FFFFFFD5 DATA
+__Lirdata 2E FFFFFFD5 DATA
+powerup F0 0 CODE
+__Htext 2E 0
+__Ltext 2E 0
+strx_copy B1 0 CODE
+__Hcode 2E 0
+__Lcode 2E 0
+__Hdata 10B 0 CODE
+__Hconst 100 0 CODE
+__Ldata 100 0 CODE
+__Lconst 100 0 CODE
+__Bbss 2E 0 XDATA
+__Hbss 2E 0 XDATA
+__Hstrings 100 0 CODE
+__Lbss 2E 0 XDATA
+__Lstrings 100 0 CODE
+str_xcopy 9B 0 CODE
+__S0 10B 0
+start1 DC 0 CODE
+__Hnvram 2E 0 XDATA
+small_model 1 0
+__Lnvram 2E 0 XDATA
+__Hheap 2E 0 XDATA
+__Lheap 2E 0 XDATA
+_main 3 0 CODE
+str_copy B1 0 CODE
+?a_main 20 0 DATA
+_exit ED 0 CODE
+start 0 0 CODE
+intlevel0 0 0
+strx_load B1 0 CODE
+__Brbit 20 20 BITSEG
+str_load B1 0 CODE
+__Hrbit 0 20 BITSEG
+intlevel1 0 0
+__Hvectors 3 0 CODE
+__Lrbit 0 20 BITSEG
+__Lvectors 0 0 CODE
+__Bidata 2E 0 DATA
+__Hidata 2E 0 DATA
+__Lidata 2E 0 DATA
+stack_internal 1 0
+__Brdata 3 FFFFFFD5 DATA
+__Hrdata 2E FFFFFFD5 DATA
+%segments
+vectors 0 F2 CODE
+rbit 0 D BITSEG
+data 100 10A CODE
+%locals
+Z:\main_0.obj
+C:\Users\D14E~1\Desktop\134\project1\main.c
+3 3 0 CODE
+18 6 0 CODE
+19 15 0 CODE
+20 19 0 CODE
+22 22 0 CODE
+24 31 0 CODE
+25 3B 0 CODE
+26 4A 0 CODE
+25 4C 0 CODE
+27 58 0 CODE
+28 62 0 CODE
+29 71 0 CODE
+28 73 0 CODE
+22 7F 0 CODE
+20 8B 0 CODE
+32 91 0 CODE
+33 95 0 CODE
+34 97 0 CODE
